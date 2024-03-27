@@ -10,12 +10,12 @@ import (
 var (
 	pathFile = "links"
 	pathLink = "https://www.freecodecamp.org/news/content/images/2021/10/golang.png"
-	amount = 10
+	amount = 1000
 )
 
 func main() {
 	writeLinks(amount, pathLink)
-	di.DownloadWithoutGoroutine(pathFile, "")
+	di.DownloadWithGoroutine(pathFile, "")
 }
 
 func writeLinks(amount int, links string) {
